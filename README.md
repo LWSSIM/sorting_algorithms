@@ -156,6 +156,19 @@ void mergeSort(int arr[], int left, int right) {
 
 In the above code snippet, the `merge` function merges two sorted subarrays in a stable manner by considering the relative order of equal elements.
 
+## Repo files layout
+
+0. **Bubble Sort**:
+
+    - *bubble_sort.c*: Bubble sort algorithm logic.
+    - *0-O*: BigO  “short” notation for the algorithm.
+
+        - best
+
+        - average
+        
+        - worst
+
 ## Conclusion
 Understanding algorithms complexity and Big O notation is crucial for analyzing and comparing the efficiency of different algorithms. We discussed the basics of Big O notation and provided code snippets for popular sorting algorithms, namely Bubble Sort, Insertion Sort, Selection Sort, and Merge Sort. Additionally, we defined stable sorting algorithms and provided an example using Merge Sort. These concepts and examples should help you understand and analyze algorithms more effectively.
 
