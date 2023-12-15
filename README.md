@@ -19,8 +19,8 @@ Big O notation expresses the upper bound or worst-case scenario of an algorithm'
    - Best Case: O(n)
    - Average Case: O(n^2)
    - Worst Case: O(n^2)
-   
-   ````c
+
+   ```c
    void bubbleSort(int arr[], int n) {
        for (int i = 0; i < n-1; i++) {
            for (int j = 0; j < n-i-1; j++) {
@@ -33,13 +33,13 @@ Big O notation expresses the upper bound or worst-case scenario of an algorithm'
        }
    }
    ```
-   
+
 2. **Insertion Sort**:
    - Best Case: O(n)
    - Average Case: O(n^2)
    - Worst Case: O(n^2)
-   
-   ````c
+
+   ```c
    void insertionSort(int arr[], int n) {
        for (int i = 1; i < n; i++) {
            int key = arr[i];
@@ -52,13 +52,12 @@ Big O notation expresses the upper bound or worst-case scenario of an algorithm'
        }
    }
    ```
-   
 3. **Selection Sort**:
    - Best Case: O(n^2)
    - Average Case: O(n^2)
    - Worst Case: O(n^2)
-   
-   ````c
+
+```c
    void selectionSort(int arr[], int n) {
        for (int i = 0; i < n-1; i++) {
            int minIndex = i;
@@ -78,20 +77,20 @@ Big O notation expresses the upper bound or worst-case scenario of an algorithm'
    - Best Case: O(n log n)
    - Average Case: O(n log n)
    - Worst Case: O(n log n)
-   
-   ````c
+
+   ```c
    void merge(int arr[], int left, int mid, int right) {
        int i, j, k;
        int n1 = mid - left + 1;
        int n2 = right - mid;
-   
+
        int L[n1], R[n2];
-   
+
        for (i = 0; i < n1; i++)
            L[i] = arr[left + i];
        for (j = 0; j < n2; j++)
            R[j] = arr[mid + 1 + j];
-   
+
        i = 0;
        j = 0;
        k = left;
@@ -106,27 +105,27 @@ Big O notation expresses the upper bound or worst-case scenario of an algorithm'
            }
            k++;
        }
-   
+
        while (i < n1) {
            arr[k] = L[i];
            i++;
            k++;
        }
-   
+
        while (j < n2) {
            arr[k] = R[j];
            j++;
            k++;
        }
    }
-   
+
    void mergeSort(int arr[], int left, int right) {
        if (left < right) {
            int mid = left + (right - left) / 2;
-   
+
            mergeSort(arr, left, mid);
            mergeSort(arr, mid + 1, right);
-   
+
            merge(arr, left, mid, right);
        }
    }
@@ -145,10 +144,10 @@ void merge(int arr[], int left, int mid, int right) {
 void mergeSort(int arr[], int left, int right) {
    if (left < right) {
        int mid = left + (right - left) / 2;
-   
+
        mergeSort(arr, left, mid);
        mergeSort(arr, mid + 1, right);
-   
+
        merge(arr, left, mid, right);
    }
 }
@@ -166,7 +165,7 @@ In the above code snippet, the `merge` function merges two sorted subarrays in a
         - best
 
         - average
-        
+
         - worst
 
 ## Conclusion
