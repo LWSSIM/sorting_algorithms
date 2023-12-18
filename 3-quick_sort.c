@@ -33,15 +33,18 @@ int partition(int *arr, int low, int high, size_t size)
 
 	for (j = low; j <= high; j++)
 	{
-		if (arr[j] < pivot)
+		if (arr[j] < pivot && arr[++i] != arr[j])
 		{
-			i++;
 			swap(&arr[i], &arr[j]);
 			print_array(arr, size);
 		}
 	}
-	swap(&arr[i + 1], &arr[high]);
-	return (i + 1);
+	if (arr[++i] != arr[high])
+	{
+		swap(&arr[i], &arr[high]);
+		print_array(arr, size);
+	}
+	return (i);
 }
 
 /**
@@ -65,6 +68,7 @@ void quick_recursion(int *arr, int low, int high, size_t size)
 		quick_recursion(arr, pivot_index + 1, high, size);
 	}
 }
+
 /**
 * quick_sort - implement quick_sort algo on an array
 * @array: ptr->array of ints
