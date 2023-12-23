@@ -41,4 +41,6 @@ void quick_sort(int *array, size_t size);
 
 /*---------Sort_Advanced---------*/
 
+void shell_sort(int *array, size_t size);
+
 #endif /*sort.h*/

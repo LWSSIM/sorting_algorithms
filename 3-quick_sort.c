@@ -16,8 +16,8 @@ void swap(int *lp, int *rp)
 }
 
 /**
-* partition - partition the array and pick tha last
-* element as pivot
+* partition - partition the array and pick the last
+* element as pivot (lomuto partition scheme)
 * @arr: ptr-> array
 * @low: lowest point
 * @high: highest point
